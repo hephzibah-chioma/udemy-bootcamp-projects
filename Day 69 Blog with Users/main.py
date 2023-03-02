@@ -13,7 +13,7 @@ from functools import wraps
 from dotenv import load_dotenv, dotenv_values
 import os
 
-# load_dotenv("C:/Users/HP/Documents/GitHub/100-days-of-coding/Day 69 Blog with Users/environment.env")
+load_dotenv("C:/Users/HP/Documents/GitHub/100-days-of-coding/Day 69 Blog with Users/environment.env")
 load_dotenv()
 
 app = Flask(__name__)
