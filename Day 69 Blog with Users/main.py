@@ -13,7 +13,8 @@ from functools import wraps
 from dotenv import load_dotenv, dotenv_values
 import os
 
-load_dotenv("C:/Users/HP/Documents/GitHub/100-days-of-coding/Day 69 Blog with Users/environment.env")
+# load_dotenv("C:/Users/HP/Documents/GitHub/100-days-of-coding/Day 69 Blog with Users/environment.env")
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ['APP_SECRET_KEY']
@@ -39,7 +40,7 @@ def admin_only(f):
 
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///blog.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
