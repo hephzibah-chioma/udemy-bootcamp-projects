@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+           </div>
+        <div class="content">
+            <div class="card">
+                {% if num == "1" %}
+                    <h2>{{first["title"]}}Title</h2>
+                    <h3>{{first["subtitle"]}}</h3>
+                    <p>{{first["body"]}}</p>
+                {% elif num == "2" %}
+                    <h2>{{second["title"]}}</h2>
+                    <h3>{{second["subtitle"]}}</h3>
+                    <p>{{second["body"]}}</p>
+                {% elif num == "3" %}
+                    <h2>{{third["title"]}}</h2>
+                    <h3>{{third["subtitle"]}}</h3>
+                    <p>{{third["body"]}}</p>
+                {% endif %}
+            </div>
+    </div>
+</div>
+</body>
+<footer>
+    <p>Made with ♥️ in London.</p>
+</footer>
+</html>

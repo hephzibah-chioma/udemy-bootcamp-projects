@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>{{first["title"]}}</h2>
+            <p class="text">{{first["subtitle"]}}</p>
+            <a href="{{url_for('to_post', num= 1)}}">Read</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>{{second["title"]}}</h2>
+            <p class="text">{{second["subtitle"]}}</p>
+            <a href="{{url_for('to_post', num= 2)}}">Read</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>{{third["title"]}}</h2>
+            <p class="text">{{third["subtitle"]}}</p>
+            <a href="{{url_for('to_post', num= 3)}}">Read</a>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <p>Made with ♥️ in Chi's Room.</p>
+</footer>
+</html>
